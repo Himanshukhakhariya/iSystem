@@ -1,0 +1,181 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "IP.ISYSTEM_PORTAL",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"WebService.xsodata": {
+				"uri": "/ISYSTEM/jezz_Portal/webservice/WebService.xsodata/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/WebService.xsodata/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "IP.ISYSTEM_PORTAL.view.Login",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "WebService.xsodata",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "IP.ISYSTEM_PORTAL.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "TargetLogin",
+					"pattern": "",
+					"target": [
+						"TargetLogin"
+					]
+				},
+				{
+					"name": "PartnerRegistration",
+					"pattern": "PartnerRegistration",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"PartnerRegistration"
+					]
+				},
+				{
+					"name": "Dashboard",
+					"pattern": "Dashboard",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Dashboard"
+					]
+				},
+				{
+					"name": "System_Registration",
+					"pattern": "System_Registration",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"System_Registration"
+					]
+				},
+				{
+					"name": "DisplayUserRequest",
+					"pattern": "DisplayUserRequest",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"DisplayUserRequest"
+					]
+				},
+				{
+					"name": "UpdateProfile",
+					"pattern": "UpdateProfile",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"UpdateProfile"
+					]
+				}
+			],
+			"targets": {
+				"TargetLogin": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Login"
+				},
+				"PartnerRegistration": {
+					"viewType": "XML",
+					"viewName": "PartnerRegistration",
+					"clearControlAggregation": false
+				},
+				"Dashboard": {
+					"viewType": "XML",
+					"viewName": "Dashboard",
+					"clearControlAggregation": false
+				},
+				"System_Registration": {
+					"viewType": "XML",
+					"viewName": "System_Registration",
+					"clearControlAggregation": false
+				},
+				"UpdateProfile": {
+					"viewType": "XML",
+					"viewName": "UpdateProfile"
+				},
+				"DisplayUserRequest": {
+					"viewType": "XML",
+					"viewName": "DisplayUserRequest",
+					"transition": "slide",
+					"clearControlAggregation": false
+				}
+			}
+		}
+	}
+}

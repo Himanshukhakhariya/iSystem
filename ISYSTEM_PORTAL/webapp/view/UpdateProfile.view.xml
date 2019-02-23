@@ -1,0 +1,33 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="IP.ISYSTEM_PORTAL.controller.UpdateProfile"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:simpleform="sap.ui.layout.form" xmlns:layout="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="My Profile Details" showNavButton="true" navButtonPress="PressGotoDashBoard">
+				<content>
+					<simpleform:SimpleForm labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="3" emptySpanL="3"
+						emptySpanM="3" emptySpanS="0" columnsXL="1" columnsL="1" editable="true" layout="ResponsiveGridLayout">
+						<Label text="Partner Name"></Label>
+						<Input id="txtpartnername"></Input>
+						<Label text="Password" visible="false"></Label>
+						<Input id="txtpassword" type="Password" visible="false"></Input>
+						<Label text="EMail Sales"></Label>
+						<Input id="txtemailsales" valueStateText="Please Enter Correct Email." change="onEmailValidation"></Input>
+						<Label text="Contact Sales"></Label>
+						<Input id="txtconteactsales"></Input>
+						<Label text="EMail Support"></Label>
+						<Input id="txtemailsupport" valueStateText="Please Enter Correct Email." change="onEmailValidation"></Input>
+						<Label text="Contact Support"></Label>
+						<Input id="txtcontactsupport"></Input>
+					</simpleform:SimpleForm>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="btnpartnerregsave" type="Accept" press="onpressupdatepartnerregsave" text="Update"></Button>
+						<Button id="btnpartnerregcancel" type="Reject" press="onpresspartnerregcancel" text="Cancel"></Button>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

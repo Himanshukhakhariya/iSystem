@@ -1,0 +1,57 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="IP.ISYSTEM_PORTAL.controller.Dashboard" xmlns:u="sap.ui.unified" xmlns:html="http://www.w3.org/1999/xhtml">
+	<u:Shell id="myShell" icon="Image/iSystems_logo.png">
+		<u:headItems>
+			<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2" visible="false" press="handlePressConfiguration"/>
+			<u:ShellHeadItem tooltip="Home" icon="sap-icon://home" visible="false" press="handlePressHome"/>
+		</u:headItems>
+		<!--<u:headEndItems>
+			<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff" press="handleLogoffPress"/>
+		</u:headEndItems>-->
+		<u:user>
+			<u:ShellHeadUserItem id="userheadername" image="sap-icon://person-placeholder" press="handleUserItemPressed"/>
+		</u:user>
+		<u:search>
+			<SearchField visible="false" search="handleSearchPressed"/>
+		</u:search>
+		<u:content>
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="System Registration" subheader="" press="presstilesystemreg">
+				<TileContent >
+					<ImageContent src="sap-icon://add"/>
+				</TileContent>
+			</GenericTile>
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Display User Registration" subheader=""
+				press="presstiledisplayuser">
+				<TileContent >
+					<ImageContent src="sap-icon://add"/>
+				</TileContent>
+			</GenericTile>
+		</u:content>
+	</u:Shell>
+	<!--	<App>
+		<pages>
+			<Page title="Portal" showHeader="false" showSubHeader="true">
+				<subHeader class="dashboardheadercolor">
+					<Bar>
+						<contentLeft>
+							<Image alt="jezz logo" src="./Image/iSystems_logo.png" height="37px" width="70px"></Image>
+						</contentLeft>
+						<contentMiddle>
+							<Label text="Jazz Dashboard"></Label>
+						</contentMiddle>
+						<contentRight>
+							<Button type="Transparent" iconFirst="false" icon="sap-icon://dropdown" text="Karl"></Button>
+						</contentRight>
+					</Bar>
+				</subHeader>
+				<content>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="System Registration" subheader="" press="presstilesystemreg">
+						<TileContent >
+							<ImageContent src="sap-icon://add"/>
+						</TileContent>
+					</GenericTile>
+				</content>
+			</Page>
+		</pages>
+	</App>-->
+</mvc:View>

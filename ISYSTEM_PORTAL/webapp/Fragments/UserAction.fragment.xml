@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ActionSheet title="Choose Your Action" showCancelButton="true" placement="Bottom">
+		<Button text="My Profile" icon="sap-icon://person-placeholder" press="handleupdateprofile"/>
+		<Button text="Log Off" icon="sap-icon://log" press="handleLogoffPress"/>
+	</ActionSheet>
+</core:FragmentDefinition>

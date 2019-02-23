@@ -1,0 +1,106 @@
+/*.TestImage {
+    border: 1px solid transparent;
+    text-align: center;
+    background: white;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.LoginCustom {
+    background: url('../Image/jezz_Background_Login.jpg');
+}
+*/
+
+.tileLayout {
+    float: left;
+}
+
+.Tablecolumnsfield {
+    padding: 0px!important;
+}
+
+.sapMListTblCell {
+    padding: 0px !important;
+    vertical-align: middle !important;
+    font-size: 0.875rem;
+}
+
+.activestatus .sapMBtn {
+    height: 2rem !important;
+    margin: 6px !important;
+    padding: 0.250rem 0 !important;
+    vertical-align: top;
+    border: none;
+    background-color: transparent;
+}
+
+.TestImage {
+    height: 70%!important;
+    width: 30%;
+    margin: 70px auto 0px;
+    border: 1px solid transparent;
+    background: white;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.qwer {
+    border: 1px solid transparent;
+    background: white;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.LoginCustom {
+    background: url('../Image/jezz_Background_Login.jpg');
+}
+
+.sapMIBar.sapMSubHeader-CTX {
+    color: #666666;
+    background-color: #c9d8e7 !important;
+}
+
+.reglink {
+    margin-top: 9px;
+}
+
+.messagestripclass {
+    width: 50%;
+    margin-left: 24%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    .TestImage {
+        width: 90%
+    }
+    .messagestripclass {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 780px) {
+    .TestImage {
+        width: 90%
+    }
+}
+
+@media screen and (min-width: 781px) and (max-width: 980px) {
+    .TestImage {
+        width: 90%
+    }
+}
+
+
+/*
+@media screen and (min-width: 981px) and (max-width: 1366px) {
+    .TestImage {
+        width: 90%
+    }
+}*/

@@ -1,0 +1,48 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="IP.ISYSTEM_PORTAL.controller.PartnerRegistration" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:simpleform="sap.ui.layout.form" xmlns:layout="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>titlepartnerreg}" showNavButton="true" navButtonPress="onbackfrompartnerreg">
+				<content>
+					<simpleform:SimpleForm labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="3" emptySpanL="3"
+						emptySpanM="3" emptySpanS="0" columnsXL="1" columnsL="1" editable="true" layout="ResponsiveGridLayout">
+						<Label text="Partner ID"></Label>
+						<Input id="txtpartnerid" maxLength="10"></Input>
+						<Label text="Partner Name"></Label>
+						<Input id="txtpartnername" maxLength="100"></Input>
+						<Label text="Password"></Label>
+						<Input id="txtpassword" maxLength="20" type="Password"></Input>
+						<Label text="EMail Sales"></Label>
+						<Input id="txtemailsales" maxLength="150" valueStateText="Please Enter Correct Email." change="onEmailValidation"></Input>
+						<Label text="Contact Sales"></Label>
+						<Input id="txtconteactsales" maxLength="50"></Input>
+						<Label text="EMail Support"></Label>
+						<Input id="txtemailsupport" maxLength="150" valueStateText="Please Enter Correct Email." change="onEmailValidation"></Input>
+						<Label text="Contact Support"></Label>
+						<Input id="txtcontactsupport" maxLength="50"></Input>
+						<!--	<Label text="Jezz Device ID"></Label>
+						<Input id="txtjezzid"></Input>
+						<Label text="Customer"></Label>
+						<Input id="txtcustomername"></Input>
+						<Label text="GoLive Date"></Label>
+						<DatePicker id="dpgolivedate"></DatePicker>
+						<Label text="Server Type"></Label>
+						<Select id="drpservertype"></Select>
+						<Label text="Installation Side"></Label>
+						<Input id="txtinstallationside"></Input>
+						<Label text="eMail Support"></Label>
+						<Input id="txtemailsupport"></Input>-->
+					</simpleform:SimpleForm>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="btnpartnerregsave" icon="sap-icon:///save" type="Accept" press="onpresspartnerregsave" text="Save"></Button>
+						<Button id="btnpartnerregcancel" icon="sap-icon://sys-cancel" type="Reject" press="onpresspartnerregcancel" text="Cancel"></Button>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

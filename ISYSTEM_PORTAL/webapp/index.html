@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>ISYSTEM_PORTAL</title>
+
+		<script id="sap-ui-bootstrap"
+			src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-async="true"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"IP.ISYSTEM_PORTAL": "./"}'>
+		</script>
+		<script src="manifest.json"></script>
+		<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+		 <script>
+		// 	function getServiceUrl(sServiceUrl){
+		// 		if(window.location.hostname === "localhost"){
+		// 			return "proxy" + sServiceUrl;
+		// 		}else{
+		// 			return sServiceUrl;
+		// 		}
+		// 	}
+		 </script>
+		<script>
+	
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "IP.ISYSTEM_PORTAL"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>
